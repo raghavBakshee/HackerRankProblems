@@ -1,6 +1,6 @@
 package letsLeetCode;
 
-public class IsPalindromeProblem9 {
+public class IsPalindrome_Problem9 {
     public static boolean isPalindrome(int x) {
         // //1200021 Leetcode giving exception - NumberFormatException at string ""
         // if(x < 0) return false;
@@ -20,7 +20,7 @@ public class IsPalindromeProblem9 {
         if(x < 0 || (x % 10 == 0 && x != 0)) return false;
     
         int res = 0;
-        while(x > res)
+        while(x > res) //Wow..Amazing logic for stoppoing at the middle of number
         {
             res = res * 10 + x % 10;
             x /= 10;
@@ -29,6 +29,6 @@ public class IsPalindromeProblem9 {
     }
 
     public static void main(String[] args) {
-        System.out.println(IsPalindromeProblem9.isPalindrome(277747474));
+        System.out.println(IsPalindrome_Problem9.isPalindrome(277747474));
     }
 }

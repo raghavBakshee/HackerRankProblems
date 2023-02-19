@@ -1,6 +1,6 @@
 package letsLeetCode;
 
-class ReverseInteger7Leetcode {
+class ReverseInteger_Problem7 {
     public static int reverse(int x) {
         boolean isNegative = false;
         isNegative = x < 0 ? true : false;
