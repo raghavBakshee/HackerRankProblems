@@ -4,6 +4,7 @@ class MaximizeTheEarning {
        
         Scanner sc = new Scanner(System.in);
         int noOfStreets = sc.nextInt(); 
+        sc.close();
        while(noOfStreets-- > 0 )
         {
             int n = sc.nextInt();

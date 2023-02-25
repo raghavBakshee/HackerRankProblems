@@ -1,6 +1,6 @@
-package g4g;
+package g4g.Math;
 
-public class Exactly3Divisors {
+public class Math_Exactly3Divisors {
     public static boolean isPrime(int N)
     {
         if(N <= 1) return false;
@@ -27,7 +27,7 @@ public class Exactly3Divisors {
      * @param args
      */
     public static void main(String[] args) {
-        System.out.println(Exactly3Divisors.exactly3Divisors(67));
+        System.out.println(Math_Exactly3Divisors.exactly3Divisors(67));
 
     }
 
