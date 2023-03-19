@@ -49,15 +49,51 @@ public class Array_Problems {
         }
     }
 
+    public static int maxDifferenceInArrayNaiveApproach(int arr[]){
+       // Maximum value of a[j] - a[i], such that j > i
+       // I/P = [2, 3, 10, 6, 4, 8, 1]
+       // O/P = 8 {10 -2}
+       int res = arr[1] - arr[0];
+        for(int i = 0; i < arr.length - 1; i++){
+            for(int j = i + 1; j < arr.length; j++){
+                // if(arr[j] - arr[i] > res)
+                //     res = arr[j] - arr[i];
+                res = Math.max(res, arr[j] - arr[i]);
+            }
+        }
+        
+        return res;
+    } 
+
+    public static int maxDifferenceInArrayEfficientApproach(int arr[]){
+        // Maximum value of a[j] - a[i], such that j > i
+        // I/P = [2, 3, 10, 6, 4, 8, 1]
+        // O/P = 8 {10 -2}
+        int res = arr[1] - arr[0];
+        int minVal = arr[0];
+        for(int j = 1; j < arr.length; j++){
+            res = Math.max(res, arr[j] - minVal);
+            minVal = Math.min(minVal, arr[j]);
+        }
+         return res;
+     } 
+
     public static void main(String[] args) {
-        System.out.println(removeDuplicatesReturnNewSize(new int[]{10, 20, 20, 30, 30, 40}));
-        int arr[] = moveZeroesToEnd(new int[]{1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9});
-        for(int a : arr){
-            System.out.print(a + " ");
-        };
-        System.out.println(" ");
-        leadersInArrayNaiveApproach(new int[]{7, 10, 4, 10, 6, 5, 2, 3});
-        System.out.println(" ");
-        leadersInArrayEfficientApproach(new int[]{7, 10, 4, 10, 6, 5, 2, 3});
+        // System.out.println(removeDuplicatesReturnNewSize(new int[]{10, 20, 20, 30, 30, 40}));
+        // int arr[] = moveZeroesToEnd(new int[]{1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9});
+        // for(int a : arr){
+        //     System.out.print(a + " ");
+        // };
+        // System.out.println(" ");
+        // leadersInArrayNaiveApproach(new int[]{7, 10, 4, 10, 6, 5, 2, 3});
+        // System.out.println(" ");
+        // leadersInArrayEfficientApproach(new int[]{7, 10, 4, 10, 6, 5, 2, 3});
+
+        System.out.println(maxDifferenceInArrayNaiveApproach(new int[]{2, 3, 10, 6, 4, 8, 1}));
+        System.out.println(maxDifferenceInArrayNaiveApproach(new int[]{30, 10, 8, 2}));
+        System.out.println(maxDifferenceInArrayEfficientApproach(new int[]{2, 3, 10, 6, 4, 8, 1}));
+        System.out.println(maxDifferenceInArrayEfficientApproach(new int[]{30, 10, 8, 2}));
+
+
     }
 }
