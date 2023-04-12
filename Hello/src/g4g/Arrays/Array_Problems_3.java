@@ -38,12 +38,32 @@ public class Array_Problems_3 {
 
         return res;
     }
+    
+    static int maxConsecutive_1s_Efficient(int arr[], int n){
+       // {1, 0, 1, 1, 1, 1, 0, 1, 1}
+       int max = 0;
+       int count = 0;
+       for(int i = 0; i < n; i++){
+            if(arr[i] == 1)
+                count++;
+            else if(count > max){
+                max = count;
+                count = 0;
+            }  
+       }
+       if(count > max) max = count;
+       
+        return max;
+    }
 
     public static void main(String[] args) {
       int arr[] = {3, 0, 1, 2, 5}, n = 5;
-      System.out.println( trappingRainWater_Naive(arr, n));
+      System.out.println(trappingRainWater_Naive(arr, n));
 
       int arr1[] = {3, 0, 1, 2, 5}, n1 = 5;
-      System.out.println( trappingRainWater_Efficient(arr1, n1));
+      System.out.println(trappingRainWater_Efficient(arr1, n1));
+
+      int array[] = {1, 0, 1, 1, 1, 1, 1, 1, 1}, x = 9;
+      System.out.println(maxConsecutive_1s_Efficient(array, x));
     }
 }
