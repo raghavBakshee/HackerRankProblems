@@ -79,15 +79,15 @@ public class Array_Problems {
      } 
 
     public static void main(String[] args) {
-        // System.out.println(removeDuplicatesReturnNewSize(new int[]{10, 20, 20, 30, 30, 40}));
-        // int arr[] = moveZeroesToEnd(new int[]{1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9});
-        // for(int a : arr){
-        //     System.out.print(a + " ");
-        // };
-        // System.out.println(" ");
-        // leadersInArrayNaiveApproach(new int[]{7, 10, 4, 10, 6, 5, 2, 3});
-        // System.out.println(" ");
-        // leadersInArrayEfficientApproach(new int[]{7, 10, 4, 10, 6, 5, 2, 3});
+        System.out.println(removeDuplicatesReturnNewSize(new int[]{10, 20, 20, 30, 30, 40}));
+        int arr[] = moveZeroesToEnd(new int[]{1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9});
+        for(int a : arr){
+            System.out.print(a + " ");
+        };
+        System.out.println(" ");
+        leadersInArrayNaiveApproach(new int[]{7, 10, 4, 10, 6, 5, 2, 3});
+        System.out.println(" ");
+        leadersInArrayEfficientApproach(new int[]{7, 10, 4, 10, 6, 5, 2, 3});
 
         System.out.println(maxDifferenceInArrayNaiveApproach(new int[]{2, 3, 10, 6, 4, 8, 1}));
         System.out.println(maxDifferenceInArrayNaiveApproach(new int[]{30, 10, 8, 2}));
