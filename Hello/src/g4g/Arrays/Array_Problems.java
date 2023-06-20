@@ -78,6 +78,20 @@ public class Array_Problems {
          return res;
      } 
 
+     public static int equilibriumPoint(int arr[]){
+        int n = arr.length; 
+        int left = 0, right = 0, pivot = 0;
+      for(int i = 1; i < n; i++){
+          right += arr[i];
+      }
+      while(pivot < n - 1 && right != left){
+          pivot++;
+          right -= arr[pivot];
+          left += arr[pivot - 1];
+      }
+      return left==right ? pivot + 1 : -1;
+     } 
+
     public static void main(String[] args) {
         System.out.println(removeDuplicatesReturnNewSize(new int[]{10, 20, 20, 30, 30, 40}));
         int arr[] = moveZeroesToEnd(new int[]{1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9});

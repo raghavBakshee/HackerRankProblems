@@ -13,7 +13,7 @@ public class FindPairClosestTo0 {
                 if(Math.abs(temp) < Math.abs(minsum)){
                     index1 = i;
                     index2 = j;
-                    minsum = Math.abs(temp);
+                    minsum = temp;
                 }
             }
         }
